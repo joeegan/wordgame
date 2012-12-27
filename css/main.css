@@ -1,0 +1,92 @@
+body {
+   position: relative;
+   font-family: 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.outer {
+   width: 396px;
+   margin: 40px auto;
+}
+
+.grid {
+   border: 1px solid grey;
+   border-top: 0;
+   border-right: 0;
+   margin-bottom: 10px;
+   overflow: hidden;
+   float: right;
+}
+
+.grid span {
+   border: 1px solid grey;
+   border-left: 0;
+   border-bottom: 0;
+   width: 20px;
+   padding: 20px;
+   height: 20px;
+   display: block;
+   float: left;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.countdown {
+   float: left;
+   text-indent: -9999px;
+   width: 17px;
+   border: 1px solid grey;
+   height: 366px;
+   position: relative;
+   overflow: hidden;
+}
+.countdown span {
+   position: absolute;
+   bottom: 366px;
+   height: 366px;
+   background: rgba(255, 21, 14, 0.5);
+   width: 25px;
+   display: block;
+}
+
+.grid span.selected {
+   background: rgba(0, 59, 255, 0.3);
+}
+
+.grid span.correct {
+   background: rgba(0, 255, 4, 0.49);
+}
+
+.grid span.incorrect {
+   background: rgba(255, 21, 14, 0.5);
+}
+
+.grid span:hover {
+   background: rgba(0, 46, 216, 0.1);
+   cursor: pointer;
+}
+
+.display-list  {
+   margin: 4px 0 0 0;
+   float: left;
+}
+
+.display-list li {
+  display: inline;
+  text-transform: uppercase;
+}
+
+.submit {
+   float: right;
+   margin: 0 0 0 0;
+   float: right;
+   font-size: 14px;
+   text-transform: uppercase;
+
+}
+
+.score {
+   margin: 4px 0 0 0;
+   float: left;
+   display: block;
+   clear: both;
+}
