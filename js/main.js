@@ -18,12 +18,12 @@
    };
 
    function prepareDom(){
-      countdownEl = document.querySelector('.countdown');
-      grid = document.querySelector('.grid');
+      countdownEl = document.getElementsByClassName('countdown')[0];
+      grid = document.getElementsByClassName('grid')[0];
       spans = Array.prototype.slice.call(document.querySelectorAll('.grid span'));
-      submit = document.querySelector('.submit');
-      scoreEl = document.querySelector('.score');
-      displayListEl = document.querySelector('.display-list');
+      submit = document.getElementsByClassName('submit')[0];
+      scoreEl = document.getElementsByClassName('score')[0];
+      displayListEl = document.getElementsByClassName('display-list')[0];
    }
 
    function getRandomAlphabet(){
@@ -61,7 +61,7 @@
          },1000);
       });
       displayListEl.innerHTML = '';
-      writeScore();
+      scoreEl.innerHTML = score;
    }
 
    function onDictionaryQueryFailure() {
@@ -89,10 +89,6 @@
          scoreEl.innerHTML = 'You scored ' + score + ', the highest score is ' + highestScore;
       }
       highScoresEl.innerHTML = 'You scored ' + score;
-   }
-
-   function writeScore() {
-      scoreEl.innerHTML = score;
    }
 
    function addEventHandlers(){
